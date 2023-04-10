@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">aes</string>
+    <string name="type_your_message_here">type_your_message_here</string>
+    <string name="send">send</string>
+</resources>
