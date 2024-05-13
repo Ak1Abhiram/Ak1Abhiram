@@ -1,0 +1,103 @@
+theia@theia-abhiramvijay:/home/project$ mkdir newRepo
+theia@theia-abhiramvijay:/home/project$ cd newRepo
+theia@theia-abhiramvijay:/home/project/newRepo$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/project/newRepo/.git/
+theia@theia-abhiramvijay:/home/project/newRepo$ git add sample.html
+fatal: pathspec 'nsample.html' did not match any files
+theia@theia-abhiramvijay:/home/project/newRepo$ git add samle.html
+theia@theia-abhiramvijay:/home/project/newRepo$ git commit m created sample.html
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'theia@theia-abhiramvijay.(none)')
+theia@theia-abhiramvijay:/home/project/newRepo$ git config -global user.email "kulkarniav30@gmail.com"
+theia@theia-abhiramvijay:/home/project/newRepo$ git commit m created sample.html
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <kulkarniav30@gmail.com>) not allowed
+theia@theia-abhiramvijay:/home/project/newRepo$   git config --global user.name "Ak1Abhiram"
+theia@theia-abhiramvijay:/home/project/newRepo$ git commit m created sample.html
+[master (root-commit) 32e634e] created
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sample.html
+theia@theia-abhiramvijay:/home/project/newRepo$ git branch 
+test 
+theia@theia-abhiramvijay:/home/project/newRepo$ git checkou test
+error: pathspec 'test' did not match any file(s) known to git
+theia@theia-abhiramvijay:/home/project/newRepo$ git checkout test
+error: pathspec 'test' did not match any file(s) known to git
+theia@theia-abhiramvijay:/home/project/newRepo$ git checkout     
+theia@theia-abhiramvijay:/home/project/newRepo$ git status
+On branch master
+nothing to commit, working tree clean
+theia@theia-abhiramvijay:/home/project/newRepo$ git branch
+* master
+  ttest
+theia@theia-abhiramvijay:/home/project/newRepo$ git checkout ttest
+Switched to branch 'ttest'
+theia@theia-abhiramvijay:/home/project/newRepo$ git log
+commit 32e634e4c7a8c2adebf318a7e6afd0e053f312c1 (HEAD -> ttest, master)
+Author: Ak1Abhiram <kulkarniav30@gmail.com>
+Date:   Mon May 13 05:27:28 2024 -0400
+
+    created
+theia@theia-abhiramvijay:/home/project/newRepo$ git push origin ttest
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+theia@theia-abhiramvijay:/home/project/newRepo$ git commit -m edited sample.html
+[ttest f1ed2e7] edited
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+theia@theia-abhiramvijay:/home/project/newRepo$ git status
+On branch ttest
+nothing to commit, working tree clean
+theia@theia-abhiramvijay:/home/project/newRepo$ git merge
+fatal: No remote for the current branch.
+theia@theia-abhiramvijay:/home/project/newRepo$ git merge main
+merge: main - not something we can merge
+theia@theia-abhiramvijay:/home/project/newRepo$ git merge ttest
+Already up to date.
+theia@theia-abhiramvijay:/home/project/newRepo$ git branch
+  master
+* ttest
+theia@theia-abhiramvijay:/home/project/newRepo$ gitcheckout master
+Switched to branch 'master'
+theia@theia-abhiramvijay:/home/project/newRepo$ git merge ttest
+Updating 32e634e..f1ed2e7
+Fast-forward
+ sample.html | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+theia@theia-abhiramvijay:/home/project/newRepo$ git branch -d ttest
+Deleted branch ttest (was f1ed2e7).
+theia@theia-abhiramvijay:/home/project/newRepo$ 
